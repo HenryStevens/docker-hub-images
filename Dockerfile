@@ -1,7 +1,7 @@
 FROM golang:alpine
 MAINTAINER "HashiCorp Terraform Team <terraform@hashicorp.com>"
 
-ENV TERRAFORM_VERSION=0.11.13
+ENV TERRAFORM_VERSION=0.12.12
 
 RUN apk add --update git bash openssh
 
@@ -14,4 +14,3 @@ RUN git clone https://github.com/hashicorp/terraform.git ./ && \
     /bin/bash scripts/build.sh
 
 WORKDIR $GOPATH
-
